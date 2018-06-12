@@ -2,9 +2,7 @@
 
 ##### 模拟post发布nchan消息
 ``` bash
-curl -H "Content-Type:application/json" \
--X POST -d '{"user": "admin", "passwd":"12345678"}' \
-http://192.168.0.65/pub?id=demo
+curl -H "Content-Type:application/json" -X POST -d '{"user": "admin", "passwd":"12345678"}' http://192.168.0.65/pub?id=demo
 ``` 
 ##### js通过websocket订阅
 ``` 
