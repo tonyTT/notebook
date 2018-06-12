@@ -20,7 +20,12 @@ make && make install
 ./nginx -V  #查看配置
 ./nginx  #打开 nginx
 ./nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退出 nginx
-
+```
+##### nginx 修改配置 重新加载
+``` bash
+./nginx -t -c /usr/local/nginx.conf    #执行后会打印 successful 标示成功
+./nginx  -s  reload  -c  /usr/local/nginx.conf #标示重新加载配置文件
+```
 
 
 ##### 模拟post发布nchan消息
