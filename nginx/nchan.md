@@ -21,6 +21,23 @@ make && make install
 ./nginx  #打开 nginx
 ./nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退出 nginx
 ```
+
+##### 添加nchan 配置
+``` bash
+#在nginx.conf 的 server 下添加
+
+   location = /sub {
+      nchan_subscriber;
+      nchan_channel_id $arg_id;
+    }
+
+    location = /pub {
+      nchan_publisher;
+      nchan_channel_id $arg_id;
+    }
+```
+
+
 ##### nginx 修改配置 重新加载
 ``` bash
 ./nginx -t -c /usr/local/nginx.conf    #执行后会打印 successful 标示成功
